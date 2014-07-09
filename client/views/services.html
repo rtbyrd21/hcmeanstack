@@ -1,0 +1,46 @@
+ <header>
+   
+    <div class="heroservices">
+    </div><!-- hero -->
+   </header>
+
+<section class="content">
+<div class="index" ng-controller="servicesController">
+  <ul>
+   <a href="/services/"><li>Service Overview</li></a>
+      <li ng-repeat="service in services"><a href="/services/{{service.name}}">{{service.name}}</li></a>
+  </ul>
+</div>
+
+
+<div class="offerings" ng-controller="servicesController">
+<!--  <h3>What we offer</h3>-->
+ <article class="serviceslist">
+    <div class="services" ng-repeat="service in services">
+        <article class="service group">
+       <a href="/services/{{service.name}}"><h3>{{service.name}} </h3></a> 
+       <p>{{service.name}}</p>
+       <a href="/services/{{service.name}}">more</a>
+       </article>
+       
+    </div>
+</article>
+  
+
+  
+</div>
+</section>
+
+ <% include partials/template/footer.ejs %>
+</div><!--Body container for slider logic-->
+
+<div class="sb-slidebar sb-left" ng-controller="servicesController">
+    <ul ng-repeat="service in services">
+    <% appdata.services.forEach(function(item) { %>
+      <a href="/services/{{service.name}}"><li>{{service.name}}</li></a>
+  </ul>
+
+
+
+
+

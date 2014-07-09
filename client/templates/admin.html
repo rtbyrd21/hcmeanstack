@@ -1,0 +1,14 @@
+<!-- TEST DATA -->
+<div ng-controller="servicesController">
+  <h1>There are {{services.length}} services</h1>
+  <ul>
+    <li ng-repeat="service in services">
+      {{service.name}}
+    </li>
+  </ul>
+<form ng-submit="createService()">
+  <input type="text" placeholder="Service name" ng-model="serviceName">
+  <button type="submit">Add</button>
+</form>
+</div>
+<h1>ADMIN</h1>
